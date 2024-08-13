@@ -1,0 +1,16 @@
+name: functions-app
+region: eu-central-1
+yamlVersion: 2
+backend:
+    path: ./
+    language:
+        name: js
+        packageManager: npm
+    functions:
+        - name: hello-world-function
+          path: ./
+          entry: index.mjs
+          handler: handler
+    scripts:
+        deploy:
+            - npm install
